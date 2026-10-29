@@ -1,0 +1,44 @@
+name: Update spots map
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 15 minutes (GitHub may run it a few minutes late)
+  workflow_dispatch:
+  push:
+    paths: ["make_spots.py"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install matplotlib requests
+
+      - name: Build spots map
+        env:
+          MY_CALL: ${{ vars.MY_CALL }}
+          MY_GRID: ${{ vars.MY_GRID }}
+          SPOT_CALLS: ${{ vars.SPOT_CALLS }}
+        run: python make_spots.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "qso-map-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/spots.json docs/spots-map.png
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "Update spots map"
+          git pull --rebase
+          git push
