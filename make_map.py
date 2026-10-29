@@ -350,8 +350,7 @@ def main():
     updated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     fig.text(0.5, 0.965, TITLE, color=text, fontsize=15, fontweight="bold",
              ha="center", va="top")
-    worked_as = (f"  ·  as {', '.join(my_calls)}" if len(my_calls) > 1
-                 else f"  ·  from {MY_GRID.upper()}")
+    worked_as = "" if len(my_calls) > 1 else f"  ·  from {MY_GRID.upper()}"
     fig.text(0.5, 0.905, f"{len(calls)} stations worked  ·  {len(qsos)} QSOs"
              f"{worked_as}", color="#c8d3dc", fontsize=9,
              ha="center", va="top")
