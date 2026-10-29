@@ -119,15 +119,42 @@ def qrz_fetch_all(key):
     return all_recs
 
 
+def api_keys():
+    """QRZ_API_KEY plus QRZ_API_KEY_2 ... QRZ_API_KEY_9 (one per callsign logbook)."""
+    names = ["QRZ_API_KEY"] + [f"QRZ_API_KEY_{i}" for i in range(2, 10)]
+    return [(n, os.environ.get(n, "").strip()) for n in names
+            if os.environ.get(n, "").strip()]
+
+
+def qso_key(q):
+    """Identity of a QSO, so one logged in two places is only counted once."""
+    return ((q.get("station_callsign") or q.get("operator") or "").upper(),
+            (q.get("call") or "").upper(), q.get("qso_date", ""),
+            (q.get("time_on") or "")[:4], (q.get("band") or "").lower())
+
+
 def load_qsos():
-    if API_KEY:
-        print("Fetching log from QRZ...")
-        return qrz_fetch_all(API_KEY)
-    adi = sorted(HERE.glob("*.adi")) + sorted(HERE.glob("*.adif"))
-    if adi:
-        print(f"Reading {adi[0].name} ...")
-        return parse_adif(adi[0].read_text(encoding="utf-8", errors="replace"))
-    sys.exit("No QRZ_API_KEY set and no .adi file found - nothing to map.")
+    sources = []
+    for name, key in api_keys():
+        print(f"Fetching QRZ logbook ({name})...")
+        recs = qrz_fetch_all(key)
+        print(f"  {len(recs)} QSOs")
+        sources.append(recs)
+    for f in sorted(HERE.glob("*.adi")) + sorted(HERE.glob("*.adif")):
+        recs = parse_adif(f.read_text(encoding="utf-8", errors="replace"))
+        print(f"Read {f.name}: {len(recs)} QSOs")
+        sources.append(recs)
+    if not sources:
+        sys.exit("No QRZ API key set and no .adi file found - nothing to map.")
+    merged, seen = [], set()
+    for recs in sources:
+        for q in recs:
+            k = qso_key(q)
+            if k in seen:
+                continue
+            seen.add(k)
+            merged.append(q)
+    return merged
 
 
 # ------------------------------------------------------ geo helpers ----
@@ -228,19 +255,29 @@ def main():
     qsos = load_qsos()
     plotted, skipped, seen = [], 0, set()
     bands = {}
+    qths = {home}
     for q in qsos:
         loc = qso_location(q)
         if not loc:
             skipped += 1
             continue
+        # Draw the path from where this QSO was made, if the log says.
+        origin = grid_to_latlon(q.get("my_gridsquare")) or home
+        qths.add(origin)
         band = (q.get("band") or "").lower()
-        key = (q.get("call", "").upper(), round(loc[0], 2), round(loc[1], 2), band)
+        key = (q.get("call", "").upper(), round(loc[0], 2), round(loc[1], 2),
+               band, round(origin[0], 1), round(origin[1], 1))
         if key in seen:
             continue
         seen.add(key)
-        plotted.append((loc, band))
+        plotted.append((loc, band, origin))
         bands[band] = bands.get(band, 0) + 1
     calls = {q.get("call", "").upper() for q in qsos if q.get("call")}
+    my_calls = sorted({(q.get("station_callsign") or q.get("operator") or "").upper()
+                       for q in qsos} - {""})
+    if MY_CALL in my_calls:  # main call first
+        my_calls.remove(MY_CALL)
+        my_calls.insert(0, MY_CALL)
     print(f"{len(qsos)} QSOs, {len(calls)} unique calls, "
           f"{len(plotted)} plotted, {skipped} without location.")
 
@@ -250,8 +287,8 @@ def main():
     elif VIEW == "na":
         x0, x1, y0, y1 = -170, -50, 10, 75
     else:
-        lats = [p[0][0] for p in plotted] + [home[0]]
-        lons = [p[0][1] for p in plotted] + [home[1]]
+        lats = [p[0][0] for p in plotted] + [q[0] for q in qths]
+        lons = [p[0][1] for p in plotted] + [q[1] for q in qths]
         x0, x1 = min(lons) - 8, max(lons) + 8
         y0, y1 = min(lats) - 6, max(lats) + 6
         # keep a pleasant 2:1 shape
@@ -280,17 +317,18 @@ def main():
         ax.axhline(lat, color="#ffffff", alpha=0.06, lw=0.5, zorder=0)
 
     # Paths and points
-    for (loc, band) in plotted:
+    for (loc, band, origin) in plotted:
         color = BAND_COLORS.get(band, OTHER_COLOR)
-        for seg in split_dateline(great_circle(home, loc)):
+        for seg in split_dateline(great_circle(origin, loc)):
             ax.add_collection(LineCollection([[(lo, la) for la, lo in seg]],
                                              colors=color, linewidths=0.6,
                                              alpha=0.35, zorder=2))
-    for (loc, band) in plotted:
+    for (loc, band, _) in plotted:
         ax.scatter(loc[1], loc[0], s=14, color=BAND_COLORS.get(band, OTHER_COLOR),
                    edgecolors="white", linewidths=0.3, zorder=3)
-    ax.scatter(home[1], home[0], s=90, marker="*", color="#ffd700",
-               edgecolors="black", linewidths=0.6, zorder=4)
+    for qth in qths:
+        ax.scatter(qth[1], qth[0], s=90, marker="*", color="#ffd700",
+                   edgecolors="black", linewidths=0.6, zorder=4)
 
     ax.set_xlim(x0, x1)
     ax.set_ylim(y0, y1)
@@ -312,8 +350,10 @@ def main():
     updated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     fig.text(0.5, 0.965, TITLE, color=text, fontsize=15, fontweight="bold",
              ha="center", va="top")
-    fig.text(0.5, 0.905, f"{len(calls)} stations worked  ·  {len(qsos)} QSOs  ·  "
-             f"from {MY_GRID.upper()}", color="#c8d3dc", fontsize=9,
+    worked_as = (f"  ·  as {', '.join(my_calls)}" if len(my_calls) > 1
+                 else f"  ·  from {MY_GRID.upper()}")
+    fig.text(0.5, 0.905, f"{len(calls)} stations worked  ·  {len(qsos)} QSOs"
+             f"{worked_as}", color="#c8d3dc", fontsize=9,
              ha="center", va="top")
     fig.text(0.99, 0.01, f"Updated {updated}", color="#8fa3b3",
              fontsize=7, ha="right", va="bottom")
