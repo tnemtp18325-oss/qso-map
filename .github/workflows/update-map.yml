@@ -1,0 +1,40 @@
+name: Update QSO map
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # every 6 hours
+  workflow_dispatch:          # "Run workflow" button for an instant refresh
+  push:
+    paths: ["*.adi", "*.adif", "make_map.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install matplotlib requests
+
+      - name: Build map
+        env:
+          QRZ_API_KEY: ${{ secrets.QRZ_API_KEY }}
+          MY_CALL: ${{ vars.MY_CALL }}
+          MY_GRID: ${{ vars.MY_GRID }}
+          MAP_VIEW: ${{ vars.MAP_VIEW }}
+          MAP_TITLE: ${{ vars.MAP_TITLE }}
+        run: python make_map.py
+
+      - name: Commit updated image
+        run: |
+          git config user.name "qso-map-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/qso-map.png
+          git diff --cached --quiet || git commit -m "Update QSO map"
+          git push
