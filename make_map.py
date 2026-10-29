@@ -35,6 +35,9 @@ NE = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geoj
 # Countries (draws international borders); plain land outline as a fallback.
 LAND_URLS = [NE + "ne_50m_admin_0_countries.geojson", NE + "ne_50m_land.geojson"]
 BORDER_COLOR = "#86a3a3"
+STATES_URL = NE + "ne_50m_admin_1_states_provinces_lines.geojson"
+STATE_COUNTRIES = {"United States of America", "Canada"}
+STATE_COLOR = "#6f8c8c"
 QRZ_URL = "https://logbook.qrz.com/api"
 
 MY_CALL = os.environ.get("MY_CALL", "N0CALL").upper().strip()
@@ -251,6 +254,37 @@ def load_land():
     return polys
 
 
+def load_state_lines():
+    """US state and Canadian province boundary lines as (lon, lat) segments."""
+    try:
+        geo = requests.get(STATES_URL, timeout=60).json()
+    except Exception as e:
+        print(f"Could not load state/province lines ({e})")
+        return []
+    segs = []
+    for f in geo.get("features", []):
+        if f.get("properties", {}).get("ADM0_NAME") not in STATE_COUNTRIES:
+            continue
+        g = f["geometry"]
+        lines = ([g["coordinates"]] if g["type"] == "LineString"
+                 else g["coordinates"] if g["type"] == "MultiLineString" else [])
+        segs.extend([[(x, y) for x, y in line] for line in lines])
+    return segs
+
+
+def draw_base(ax, land_c):
+    """Countries with borders, plus US state / Canadian province lines."""
+    land = load_land()
+    if land:
+        ax.add_collection(PolyCollection(land, facecolor=land_c,
+                                         edgecolor=BORDER_COLOR, linewidth=0.45,
+                                         zorder=1))
+    states = load_state_lines()
+    if states:
+        ax.add_collection(LineCollection(states, colors=STATE_COLOR,
+                                         linewidths=0.3, zorder=1.1))
+
+
 # ------------------------------------------------------------- drawing ----
 
 def main():
@@ -323,11 +357,7 @@ def main():
     fig.patch.set_facecolor(sea)
     ax.set_facecolor(sea)
 
-    land = load_land()
-    if land:
-        ax.add_collection(PolyCollection(land, facecolor=land_c,
-                                         edgecolor=BORDER_COLOR, linewidth=0.45,
-                                         zorder=1))
+    draw_base(ax, land_c)
     for lon in range(-180, 181, 30):
         ax.axvline(lon, color="#ffffff", alpha=0.06, lw=0.5, zorder=0)
     for lat in range(-90, 91, 30):

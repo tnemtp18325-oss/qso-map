@@ -31,8 +31,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection, PolyCollection
 
-from make_map import (BAND_COLORS, OTHER_COLOR, BORDER_COLOR, grid_to_latlon, great_circle,
-                      split_dateline, load_land)
+from make_map import (BAND_COLORS, OTHER_COLOR, grid_to_latlon, great_circle,
+                      split_dateline, draw_base)
 
 HERE = Path(__file__).resolve().parent
 STATE = HERE / "data" / "spots.json"
@@ -207,11 +207,7 @@ def draw(state, now):
     else:
         x0, x1, y0, y1 = -180, 180, -60, 85
 
-    land = load_land()
-    if land:
-        ax.add_collection(PolyCollection(land, facecolor=land_c,
-                                         edgecolor=BORDER_COLOR, linewidth=0.45,
-                                         zorder=1))
+    draw_base(ax, land_c)
     for lon in range(-180, 181, 30):
         ax.axvline(lon, color="#ffffff", alpha=0.06, lw=0.5, zorder=0)
     for lat in range(-90, 91, 30):
@@ -270,7 +266,8 @@ def draw(state, now):
     if recent:
         spotters = {s["spotter"].upper() for s in recent}
         far = max(recent, key=lambda s: miles(home, (s["lat"], s["lon"])))
-        summary = (f"Heard by {len(spotters)} stations in the last 24 hours  ·  "
+        summary = (f"Heard by {len(spotters)} station{'' if len(spotters) == 1 else 's'} "
+                   f"in the last 24 hours  ·  "
                    f"farthest {miles(home, (far['lat'], far['lon'])):,.0f} mi "
                    f"({far['spotter']})")
     else:
