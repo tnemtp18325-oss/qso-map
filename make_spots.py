@@ -8,7 +8,7 @@ your callsign from:
   - Reverse Beacon Network (CW / RTTY skimmers, via HamQTH)
   - DX cluster            (spots posted by other hams, e.g. SSB, via HamQTH)
 keeps them in data/spots.json, and draws docs/spots-map.png showing everyone
-who heard you in the last 24 hours plus an ON THE AIR / last-heard banner.
+who heard you in the last hour plus an ON THE AIR / last-heard banner.
 
 Settings (GitHub variables):
   MY_CALL      callsign to watch, e.g. KZ5MH
@@ -44,7 +44,7 @@ CALLS = [MY_CALL] + [c.strip().upper() for c in
                      os.environ.get("SPOT_CALLS", "").split(",") if c.strip()]
 UA = {"User-Agent": f"QSOMapForQRZPage-spots/1.0 ({MY_CALL})"}
 
-WINDOW = 24 * 3600          # spots drawn on the map
+WINDOW = 3600               # spots drawn on the map (last hour)
 ON_AIR = 15 * 60            # "ON THE AIR" if heard within this many seconds
 KEEP = 30 * 24 * 3600       # history kept for "last heard"
 
@@ -267,11 +267,11 @@ def draw(state, now):
         spotters = {s["spotter"].upper() for s in recent}
         far = max(recent, key=lambda s: miles(home, (s["lat"], s["lon"])))
         summary = (f"Heard by {len(spotters)} station{'' if len(spotters) == 1 else 's'} "
-                   f"in the last 24 hours  ·  "
+                   f"in the last hour  ·  "
                    f"farthest {miles(home, (far['lat'], far['lon'])):,.0f} mi "
                    f"({far['spotter']})")
     else:
-        summary = "Not heard in the last 24 hours"
+        summary = "Not heard in the last hour"
     fig.text(0.5, 0.835, summary, color="#c8d3dc", fontsize=9, ha="center",
              va="top")
     fig.text(0.01, 0.01, "Spots: PSK Reporter · Reverse Beacon Network · "
