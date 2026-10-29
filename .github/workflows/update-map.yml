@@ -25,6 +25,10 @@ jobs:
       - name: Build map
         env:
           QRZ_API_KEY: ${{ secrets.QRZ_API_KEY }}
+          QRZ_API_KEY_2: ${{ secrets.QRZ_API_KEY_2 }}
+          QRZ_API_KEY_3: ${{ secrets.QRZ_API_KEY_3 }}
+          QRZ_API_KEY_4: ${{ secrets.QRZ_API_KEY_4 }}
+          QRZ_API_KEY_5: ${{ secrets.QRZ_API_KEY_5 }}
           MY_CALL: ${{ vars.MY_CALL }}
           MY_GRID: ${{ vars.MY_GRID }}
           MAP_VIEW: ${{ vars.MAP_VIEW }}
