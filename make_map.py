@@ -261,9 +261,7 @@ def main():
         if not loc:
             skipped += 1
             continue
-        # Draw the path from where this QSO was made, if the log says.
-        origin = grid_to_latlon(q.get("my_gridsquare")) or home
-        qths.add(origin)
+        origin = home  # one QTH star; all paths start from MY_GRID
         band = (q.get("band") or "").lower()
         key = (q.get("call", "").upper(), round(loc[0], 2), round(loc[1], 2),
                band, round(origin[0], 1), round(origin[1], 1))
