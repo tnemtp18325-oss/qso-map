@@ -273,12 +273,24 @@ def main():
         plotted.append((loc, band, origin))
         bands[band] = bands.get(band, 0) + 1
     calls = {q.get("call", "").upper() for q in qsos if q.get("call")}
+    # Countries = DXCC entities (falls back to the country name if no number)
+    countries = set()
+    for q in qsos:
+        dxcc = (q.get("dxcc") or "").strip().lstrip("0")
+        if dxcc and dxcc.isdigit():
+            countries.add(("dxcc", dxcc))
+        elif (q.get("country") or "").strip():
+            countries.add(("name", q["country"].strip().upper()))
+    # A country seen by name only is dropped if the same country has a number elsewhere
+    names_with_num = {(q.get("country") or "").strip().upper() for q in qsos
+                      if (q.get("dxcc") or "").strip().lstrip("0").isdigit()}
+    countries = {c for c in countries if not (c[0] == "name" and c[1] in names_with_num)}
     my_calls = sorted({(q.get("station_callsign") or q.get("operator") or "").upper()
                        for q in qsos} - {""})
     if MY_CALL in my_calls:  # main call first
         my_calls.remove(MY_CALL)
         my_calls.insert(0, MY_CALL)
-    print(f"{len(qsos)} QSOs, {len(calls)} unique calls, "
+    print(f"{len(qsos)} QSOs, {len(calls)} unique calls, {len(countries)} countries, "
           f"{len(plotted)} plotted, {skipped} without location.")
 
     # Map extent
@@ -351,8 +363,8 @@ def main():
     fig.text(0.5, 0.965, TITLE, color=text, fontsize=15, fontweight="bold",
              ha="center", va="top")
     worked_as = "" if len(my_calls) > 1 else f"  ·  from {MY_GRID.upper()}"
-    fig.text(0.5, 0.905, f"{len(calls)} stations worked  ·  {len(qsos)} QSOs"
-             f"{worked_as}", color="#c8d3dc", fontsize=9,
+    fig.text(0.5, 0.905, f"{len(calls)} stations worked  ·  {len(qsos)} QSOs  ·  "
+             f"{len(countries)} countries{worked_as}", color="#c8d3dc", fontsize=9,
              ha="center", va="top")
     fig.text(0.99, 0.01, f"Updated {updated}", color="#8fa3b3",
              fontsize=7, ha="right", va="bottom")
