@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "qso-map-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/qso-map.png docs/was-map.png
+          git add docs/qso-map.png docs/was-map.png docs/was-5band.png
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
           git commit -m "Update QSO and WAS maps"
           for try in 1 2 3; do
