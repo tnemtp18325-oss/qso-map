@@ -37,7 +37,7 @@ LAND_URLS = [NE + "ne_50m_admin_0_countries.geojson", NE + "ne_50m_land.geojson"
 BORDER_COLOR = "#86a3a3"
 STATES_URL = NE + "ne_50m_admin_1_states_provinces_lines.geojson"
 STATE_COUNTRIES = {"United States of America", "Canada"}
-STATE_COLOR = "#6f8c8c"
+STATE_COLOR = "#b4caca"
 QRZ_URL = "https://logbook.qrz.com/api"
 
 MY_CALL = os.environ.get("MY_CALL", "N0CALL").upper().strip()
@@ -282,7 +282,8 @@ def draw_base(ax, land_c):
     states = load_state_lines()
     if states:
         ax.add_collection(LineCollection(states, colors=STATE_COLOR,
-                                         linewidths=0.3, zorder=1.1))
+                                         linewidths=0.45, alpha=0.55,
+                                         zorder=2.5))  # above paths, below dots
 
 
 # ------------------------------------------------------------- drawing ----
