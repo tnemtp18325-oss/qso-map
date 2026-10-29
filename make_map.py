@@ -31,8 +31,10 @@ import requests
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "docs" / "qso-map.png"
-LAND_URL = ("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/"
-            "master/geojson/ne_50m_land.geojson")
+NE = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/"
+# Countries (draws international borders); plain land outline as a fallback.
+LAND_URLS = [NE + "ne_50m_admin_0_countries.geojson", NE + "ne_50m_land.geojson"]
+BORDER_COLOR = "#86a3a3"
 QRZ_URL = "https://logbook.qrz.com/api"
 
 MY_CALL = os.environ.get("MY_CALL", "N0CALL").upper().strip()
@@ -230,10 +232,14 @@ def split_dateline(pts):
 
 
 def load_land():
-    try:
-        geo = requests.get(LAND_URL, timeout=60).json()
-    except Exception as e:  # map still renders without coastlines
-        print(f"Could not load coastlines ({e}); drawing without them.")
+    geo = None
+    for url in LAND_URLS:
+        try:
+            geo = requests.get(url, timeout=60).json()
+            break
+        except Exception as e:
+            print(f"Could not load {url.rsplit('/', 1)[-1]} ({e})")
+    if geo is None:  # map still renders without coastlines
         return []
     polys = []
     for f in geo.get("features", []):
@@ -320,7 +326,8 @@ def main():
     land = load_land()
     if land:
         ax.add_collection(PolyCollection(land, facecolor=land_c,
-                                         edgecolor=edge, linewidth=0.4, zorder=1))
+                                         edgecolor=BORDER_COLOR, linewidth=0.45,
+                                         zorder=1))
     for lon in range(-180, 181, 30):
         ax.axvline(lon, color="#ffffff", alpha=0.06, lw=0.5, zorder=0)
     for lat in range(-90, 91, 30):

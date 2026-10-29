@@ -31,7 +31,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection, PolyCollection
 
-from make_map import (BAND_COLORS, OTHER_COLOR, grid_to_latlon, great_circle,
+from make_map import (BAND_COLORS, OTHER_COLOR, BORDER_COLOR, grid_to_latlon, great_circle,
                       split_dateline, load_land)
 
 HERE = Path(__file__).resolve().parent
@@ -209,8 +209,9 @@ def draw(state, now):
 
     land = load_land()
     if land:
-        ax.add_collection(PolyCollection(land, facecolor=land_c, edgecolor=edge,
-                                         linewidth=0.4, zorder=1))
+        ax.add_collection(PolyCollection(land, facecolor=land_c,
+                                         edgecolor=BORDER_COLOR, linewidth=0.45,
+                                         zorder=1))
     for lon in range(-180, 181, 30):
         ax.axvline(lon, color="#ffffff", alpha=0.06, lw=0.5, zorder=0)
     for lat in range(-90, 91, 30):
