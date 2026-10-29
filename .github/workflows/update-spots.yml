@@ -1,22 +1,25 @@
 name: Update spots map
 
+# GitHub's scheduler is unreliable for short intervals, so this starts once an
+# hour and then refreshes the spots map every 5 minutes itself for that hour.
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes (GitHub may run it a few minutes late)
+    - cron: "0 * * * *"
   workflow_dispatch:
   push:
-    paths: ["make_spots.py"]
+    paths: ["make_spots.py", ".github/workflows/update-spots.yml"]
 
 permissions:
   contents: write
 
 concurrency:
-  group: repo-writes
-  cancel-in-progress: false
+  group: spots
+  cancel-in-progress: true   # a new run replaces the old loop
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 70
     steps:
       - uses: actions/checkout@v4
 
@@ -26,19 +29,28 @@ jobs:
 
       - run: pip install matplotlib requests
 
-      - name: Build spots map
+      - name: Refresh spots every 5 minutes for an hour
         env:
           MY_CALL: ${{ vars.MY_CALL }}
           MY_GRID: ${{ vars.MY_GRID }}
           SPOT_CALLS: ${{ vars.SPOT_CALLS }}
-        run: python make_spots.py
-
-      - name: Commit if anything changed
         run: |
           git config user.name "qso-map-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/spots.json docs/spots-map.png
-          if git diff --cached --quiet; then echo "No change"; exit 0; fi
-          git commit -m "Update spots map"
-          git pull --rebase
-          git push
+          for i in $(seq 1 12); do
+            start=$SECONDS
+            git pull --rebase --quiet || true
+            python make_spots.py || echo "spots run failed"
+            git add data/spots.json docs/spots-map.png
+            if ! git diff --cached --quiet; then
+              git commit -m "Update spots map" --quiet
+              for try in 1 2 3; do
+                git pull --rebase --quiet && git push --quiet && break
+                sleep 5
+              done
+            fi
+            if [ "$i" -lt 12 ]; then
+              wait=$(( 300 - (SECONDS - start) ))
+              if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
+            fi
+          done

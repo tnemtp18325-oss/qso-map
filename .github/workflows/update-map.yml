@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: repo-writes
+  group: qso-map
   cancel-in-progress: false
 
 jobs:
@@ -46,5 +46,7 @@ jobs:
           git add docs/qso-map.png
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
           git commit -m "Update QSO map"
-          git pull --rebase
-          git push
+          for try in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done
