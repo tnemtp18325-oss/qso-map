@@ -5,7 +5,7 @@ on:
     - cron: "17 */6 * * *"   # every 6 hours
   workflow_dispatch:          # "Run workflow" button for an instant refresh
   push:
-    paths: ["*.adi", "*.adif", "make_map.py"]
+    paths: ["*.adi", "*.adif", "make_map.py", "make_was.py"]
 
 permissions:
   contents: write
@@ -37,15 +37,17 @@ jobs:
           MY_GRID: ${{ vars.MY_GRID }}
           MAP_VIEW: ${{ vars.MAP_VIEW }}
           MAP_TITLE: ${{ vars.MAP_TITLE }}
-        run: python make_map.py
+        run: |
+          python make_map.py
+          python make_was.py
 
       - name: Commit updated image
         run: |
           git config user.name "qso-map-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/qso-map.png
+          git add docs/qso-map.png docs/was-map.png
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
-          git commit -m "Update QSO map"
+          git commit -m "Update QSO and WAS maps"
           for try in 1 2 3; do
             git pull --rebase && git push && break
             sleep 5
