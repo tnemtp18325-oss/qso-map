@@ -2,7 +2,7 @@
 """
 Spots map for a QRZ.com bio page: where your signal has been heard lately.
 
-Every run (a GitHub Action runs it every 15 minutes) it collects new spots of
+Every run (a GitHub Action runs it every 5 minutes) it collects new spots of
 your callsign from:
   - PSK Reporter          (FT8, FT4, PSK and other digital modes)
   - Reverse Beacon Network (CW / RTTY skimmers, via HamQTH)
@@ -45,7 +45,7 @@ CALLS = [MY_CALL] + [c.strip().upper() for c in
 UA = {"User-Agent": f"QSOMapForQRZPage-spots/1.0 ({MY_CALL})"}
 
 WINDOW = 24 * 3600          # spots drawn on the map
-ON_AIR = 30 * 60            # "ON THE AIR" if heard within this many seconds
+ON_AIR = 15 * 60            # "ON THE AIR" if heard within this many seconds
 KEEP = 30 * 24 * 3600       # history kept for "last heard"
 
 BANDS = [(1.8, 2.0, "160m"), (3.5, 4.0, "80m"), (5.3, 5.45, "60m"),
@@ -72,11 +72,11 @@ def latlon_of(grid):
 # ------------------------------------------------------------- sources ----
 
 def fetch_pskreporter():
-    """Reception reports from the last 2 hours (runs are every 15 minutes)."""
+    """Reception reports from the last 30 minutes (runs are every 5 minutes)."""
     out = []
     for call in CALLS:
         params = {"senderCallsign": call, "rronly": 1, "noactive": 1,
-                  "flowStartSeconds": -7200}
+                  "flowStartSeconds": -1800}
         r = requests.get("https://retrieve.pskreporter.info/query",
                          params=params, headers=UA, timeout=60)
         r.raise_for_status()
