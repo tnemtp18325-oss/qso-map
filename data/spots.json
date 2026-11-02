@@ -57,14 +57,14 @@
 },
 "psk|AA7NM|10m|WSPR": {
 "band": "10m",
-"freq": 28.1261,
+"freq": 28.1262,
 "lat": 46.97916666666667,
 "lon": -122.79166666666666,
 "mode": "WSPR",
-"snr": "-5",
+"snr": "-17",
 "spotter": "AA7NM",
 "src": "psk",
-"t": 1793644080
+"t": 1793648400
 },
 "psk|AA7NM|12m|FT8": {
 "band": "12m",
@@ -277,14 +277,14 @@
 },
 "psk|AF7KR|10m|WSPR": {
 "band": "10m",
-"freq": 28.1261,
+"freq": 28.1262,
 "lat": 35.270833333333336,
 "lon": -111.70833333333333,
 "mode": "WSPR",
-"snr": "-23",
+"snr": "-10",
 "spotter": "AF7KR",
 "src": "psk",
-"t": 1793644080
+"t": 1793648400
 },
 "psk|AF7KR|12m|FT8": {
 "band": "12m",
@@ -2409,6 +2409,17 @@
 "src": "psk",
 "t": 1793279446
 },
+"psk|KD7EFG|10m|WSPR": {
+"band": "10m",
+"freq": 28.1262,
+"lat": 41.60416666666667,
+"lon": -112.29166666666666,
+"mode": "WSPR",
+"snr": "1",
+"spotter": "KD7EFG",
+"src": "psk",
+"t": 1793648400
+},
 "psk|KD7EFG|12m|WSPR": {
 "band": "12m",
 "freq": 24.9261,
@@ -2708,14 +2719,14 @@
 },
 "psk|KFS/NW|10m|WSPR": {
 "band": "10m",
-"freq": 28.1261,
+"freq": 28.1262,
 "lat": 37.395833333333336,
 "lon": -122.375,
 "mode": "WSPR",
-"snr": "-16",
+"snr": "-28",
 "spotter": "KFS/NW",
 "src": "psk",
-"t": 1793644080
+"t": 1793648400
 },
 "psk|KFS/NW|17m|WSPR": {
 "band": "17m",
@@ -3071,14 +3082,14 @@
 },
 "psk|KM0R|10m|WSPR": {
 "band": "10m",
-"freq": 28.1261,
+"freq": 28.1262,
 "lat": 33.3125,
 "lon": -111.625,
 "mode": "WSPR",
-"snr": "-12",
+"snr": "-20",
 "spotter": "KM0R",
 "src": "psk",
-"t": 1793644080
+"t": 1793648400
 },
 "psk|KM0R|12m|WSPR": {
 "band": "12m",
@@ -4219,10 +4230,10 @@
 "lat": 40.9375,
 "lon": -111.875,
 "mode": "WSPR",
-"snr": "-16",
+"snr": "-22",
 "spotter": "N7VVX",
 "src": "psk",
-"t": 1793645520
+"t": 1793648760
 },
 "psk|N7VVX|20m|WSPR": {
 "band": "20m",
@@ -5577,6 +5588,17 @@
 "src": "psk",
 "t": 1793279445
 },
+"psk|W3PM|10m|WSPR": {
+"band": "10m",
+"freq": 28.1262,
+"lat": 34.72916666666667,
+"lon": -86.79166666666666,
+"mode": "WSPR",
+"snr": "-27",
+"spotter": "W3PM",
+"src": "psk",
+"t": 1793648400
+},
 "psk|W3PM|17m|WSPR": {
 "band": "17m",
 "freq": 18.1061,
@@ -6731,6 +6753,17 @@
 "spotter": "XE2YWB",
 "src": "psk",
 "t": 1793641500
+},
+"psk|ZD8GB|10m|WSPR": {
+"band": "10m",
+"freq": 28.1262,
+"lat": -7.9375,
+"lon": -14.375,
+"mode": "WSPR",
+"snr": "-21",
+"spotter": "ZD8GB",
+"src": "psk",
+"t": 1793648400
 }
 }
 }
