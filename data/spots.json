@@ -330,6 +330,28 @@
 "src": "psk",
 "t": 1793278275
 },
+"psk|CT1CHT-M|12m|FT8": {
+"band": "12m",
+"freq": 24.9163,
+"lat": 40.895833333333336,
+"lon": -8.541666666666668,
+"mode": "FT8",
+"snr": "-16",
+"spotter": "CT1CHT-M",
+"src": "psk",
+"t": 1793643029
+},
+"psk|CT1EYQ|12m|FT8": {
+"band": "12m",
+"freq": 24.9163,
+"lat": 38.0625,
+"lon": -8.791666666666668,
+"mode": "FT8",
+"snr": "-16",
+"spotter": "CT1EYQ",
+"src": "psk",
+"t": 1793643015
+},
 "psk|CT1ILT|10m|FT8": {
 "band": "10m",
 "freq": 28.075,
@@ -395,6 +417,17 @@
 "spotter": "DL0PF",
 "src": "psk",
 "t": 1793281845
+},
+"psk|EA8/DF4UE|12m|FT8": {
+"band": "12m",
+"freq": 24.9163,
+"lat": 28.645833333333332,
+"lon": -13.875,
+"mode": "FT8",
+"snr": "2",
+"spotter": "EA8/DF4UE",
+"src": "psk",
+"t": 1793643031
 },
 "psk|EA8/DF4UE|17m|FT8": {
 "band": "17m",
@@ -879,6 +912,17 @@
 "spotter": "K4SO",
 "src": "psk",
 "t": 1793409600
+},
+"psk|K5EM|12m|FT8": {
+"band": "12m",
+"freq": 24.9164,
+"lat": 47.6875,
+"lon": -122.29166666666666,
+"mode": "FT8",
+"snr": "-20",
+"spotter": "K5EM",
+"src": "psk",
+"t": 1793643015
 },
 "psk|K5EM|40m|FT8": {
 "band": "40m",
@@ -2849,6 +2893,17 @@
 "src": "psk",
 "t": 1793279465
 },
+"psk|N7QXB|12m|FT8": {
+"band": "12m",
+"freq": 24.9163,
+"lat": 40.6875,
+"lon": -111.79166666666666,
+"mode": "FT8",
+"snr": "1",
+"spotter": "N7QXB",
+"src": "psk",
+"t": 1793643030
+},
 "psk|N7QXB|40m|FT8": {
 "band": "40m",
 "freq": 7.0763,
@@ -3145,6 +3200,17 @@
 "spotter": "NG7E",
 "src": "psk",
 "t": 1793641470
+},
+"psk|NG7M|12m|FT8": {
+"band": "12m",
+"freq": 24.9163,
+"lat": 41.0625,
+"lon": -112.04166666666666,
+"mode": "FT8",
+"snr": "-3",
+"spotter": "NG7M",
+"src": "psk",
+"t": 1793643015
 },
 "psk|NG7M|17m|FT8": {
 "band": "17m",
@@ -4311,6 +4377,17 @@
 "spotter": "WA7LNW",
 "src": "psk",
 "t": 1793641470
+},
+"psk|WA7LNW|12m|FT8": {
+"band": "12m",
+"freq": 24.9162,
+"lat": 37.145833333333336,
+"lon": -113.45833333333333,
+"mode": "FT8",
+"snr": "0",
+"spotter": "WA7LNW",
+"src": "psk",
+"t": 1793643015
 },
 "psk|WA7LNW|17m|FT8": {
 "band": "17m",
