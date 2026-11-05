@@ -365,14 +365,14 @@
 },
 "psk|AF7KR|12m|FT8": {
 "band": "12m",
-"freq": 24.9157,
+"freq": 24.9161,
 "lat": 33.3125,
 "lon": -111.875,
 "mode": "FT8",
-"snr": "-6",
+"snr": "-10",
 "spotter": "AF7KR",
 "src": "psk",
-"t": 1793643210
+"t": 1793916105
 },
 "psk|AF7KR|12m|WSPR": {
 "band": "12m",
