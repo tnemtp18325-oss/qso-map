@@ -6699,6 +6699,17 @@
 "src": "psk",
 "t": 1793641470
 },
+"psk|NG7M|10m|CW": {
+"band": "10m",
+"freq": 28.026,
+"lat": 41.0625,
+"lon": -112.04166666666666,
+"mode": "CW",
+"snr": "8",
+"spotter": "NG7M",
+"src": "psk",
+"t": 1794068220
+},
 "psk|NG7M|12m|FT8": {
 "band": "12m",
 "freq": 24.916,
@@ -8964,6 +8975,17 @@
 "spotter": "WA6OZQ",
 "src": "psk",
 "t": 1793744145
+},
+"psk|WA7LNW|10m|CW": {
+"band": "10m",
+"freq": 28.0261,
+"lat": 37.145833333333336,
+"lon": -113.45833333333333,
+"mode": "CW",
+"snr": "6",
+"spotter": "WA7LNW",
+"src": "psk",
+"t": 1794068219
 },
 "psk|WA7LNW|10m|FT8": {
 "band": "10m",
