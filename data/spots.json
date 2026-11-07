@@ -9955,6 +9955,17 @@
 "src": "rbn",
 "t": 1794056172
 },
+"rbn|G3AKX|10m|CW": {
+"band": "10m",
+"freq": 28.0261,
+"lat": 51.5,
+"lon": -1.0,
+"mode": "CW",
+"snr": 16,
+"spotter": "G3AKX",
+"src": "rbn",
+"t": 1794068231
+},
 "rbn|G3AKX|20m|CW": {
 "band": "20m",
 "freq": 14.014,
@@ -9965,6 +9976,28 @@
 "spotter": "G3AKX",
 "src": "rbn",
 "t": 1793991148
+},
+"rbn|IQ9RG|10m|CW": {
+"band": "10m",
+"freq": 28.0261,
+"lat": 36.5,
+"lon": 15.0,
+"mode": "CW",
+"snr": 6,
+"spotter": "IQ9RG",
+"src": "rbn",
+"t": 1794068231
+},
+"rbn|IT9GSF|10m|CW": {
+"band": "10m",
+"freq": 28.0261,
+"lat": 37.5,
+"lon": 13.0,
+"mode": "CW",
+"snr": 19,
+"spotter": "IT9GSF",
+"src": "rbn",
+"t": 1794068231
 },
 "rbn|IT9GSF|20m|CW": {
 "band": "20m",
@@ -10329,6 +10362,17 @@
 "src": "rbn",
 "t": 1794058251
 },
+"rbn|KW7MM|10m|CW": {
+"band": "10m",
+"freq": 28.0261,
+"lat": 32.5,
+"lon": -111.0,
+"mode": "CW",
+"snr": 22,
+"spotter": "KW7MM",
+"src": "rbn",
+"t": 1794068231
+},
 "rbn|KW7MM|15m|CW": {
 "band": "15m",
 "freq": 21.01,
@@ -10505,6 +10549,17 @@
 "src": "rbn",
 "t": 1794058251
 },
+"rbn|NG7M|10m|CW": {
+"band": "10m",
+"freq": 28.0261,
+"lat": 41.5,
+"lon": -113.0,
+"mode": "CW",
+"snr": 8,
+"spotter": "NG7M",
+"src": "rbn",
+"t": 1794068231
+},
 "rbn|NG7M|15m|CW": {
 "band": "15m",
 "freq": 21.01,
@@ -10551,14 +10606,14 @@
 },
 "rbn|TI7W|10m|CW": {
 "band": "10m",
-"freq": 28.2181,
+"freq": 28.0261,
 "lat": 10.5,
 "lon": -85.0,
 "mode": "CW",
 "snr": 11,
 "spotter": "TI7W",
 "src": "rbn",
-"t": 1793986760
+"t": 1794068231
 },
 "rbn|TI7W|15m|CW": {
 "band": "15m",
@@ -10592,6 +10647,17 @@
 "spotter": "VE6JY",
 "src": "rbn",
 "t": 1794067100
+},
+"rbn|VE6WZ|10m|CW": {
+"band": "10m",
+"freq": 28.0261,
+"lat": 51.5,
+"lon": -115.0,
+"mode": "CW",
+"snr": 14,
+"spotter": "VE6WZ",
+"src": "rbn",
+"t": 1794068231
 },
 "rbn|VE6WZ|15m|CW": {
 "band": "15m",
@@ -10768,6 +10834,17 @@
 "spotter": "W8WWV",
 "src": "rbn",
 "t": 1794058251
+},
+"rbn|WA7LNW|10m|CW": {
+"band": "10m",
+"freq": 28.0261,
+"lat": 37.5,
+"lon": -113.0,
+"mode": "CW",
+"snr": 6,
+"spotter": "WA7LNW",
+"src": "rbn",
+"t": 1794068231
 },
 "rbn|WA7LNW|15m|CW": {
 "band": "15m",
