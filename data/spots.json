@@ -1982,14 +1982,14 @@
 },
 "psk|K3GMQ|40m|CW": {
 "band": "40m",
-"freq": 7.011,
+"freq": 7.03,
 "lat": 40.3125,
 "lon": -75.04166666666666,
 "mode": "CW",
-"snr": "8",
+"snr": "7",
 "spotter": "K3GMQ",
 "src": "psk",
-"t": 1794058196
+"t": 1794100321
 },
 "psk|K3GMQ|40m|FT8": {
 "band": "40m",
@@ -6679,14 +6679,14 @@
 },
 "psk|NB3A|40m|CW": {
 "band": "40m",
-"freq": 7.011,
+"freq": 7.03,
 "lat": 38.72916666666667,
 "lon": -77.79166666666666,
 "mode": "CW",
-"snr": "18",
+"snr": "10",
 "spotter": "NB3A",
 "src": "psk",
-"t": 1794058240
+"t": 1794100321
 },
 "psk|NB3A|40m|FT8": {
 "band": "40m",
@@ -10027,10 +10027,10 @@
 "lat": 38.5,
 "lon": -95.0,
 "mode": "CW",
-"snr": 14,
+"snr": 21,
 "spotter": "AC0C",
 "src": "rbn",
-"t": 1794081113
+"t": 1794100330
 },
 "rbn|AC0VW|20m|CW": {
 "band": "20m",
@@ -10151,7 +10151,7 @@
 "snr": 10,
 "spotter": "K1HTV",
 "src": "rbn",
-"t": 1794100117
+"t": 1794100330
 },
 "rbn|K1RA|20m|CW": {
 "band": "20m",
@@ -10173,7 +10173,7 @@
 "snr": 12,
 "spotter": "K1RA",
 "src": "rbn",
-"t": 1794100117
+"t": 1794100330
 },
 "rbn|K3FEF|20m|CW": {
 "band": "20m",
@@ -10210,14 +10210,25 @@
 },
 "rbn|K3GMQ|40m|CW": {
 "band": "40m",
-"freq": 7.022,
+"freq": 7.03,
 "lat": 40.5,
 "lon": -75.0,
 "mode": "CW",
-"snr": 9,
+"snr": 7,
 "spotter": "K3GMQ",
 "src": "rbn",
-"t": 1794058873
+"t": 1794100330
+},
+"rbn|K3LR|40m|CW": {
+"band": "40m",
+"freq": 7.03,
+"lat": 41.5,
+"lon": -81.0,
+"mode": "CW",
+"snr": 13,
+"spotter": "K3LR",
+"src": "rbn",
+"t": 1794100330
 },
 "rbn|K3PA|20m|CW": {
 "band": "20m",
@@ -10591,7 +10602,7 @@
 "snr": 6,
 "spotter": "N2CR",
 "src": "rbn",
-"t": 1794100117
+"t": 1794100330
 },
 "rbn|N2YCH|20m|CW": {
 "band": "20m",
@@ -10727,14 +10738,14 @@
 },
 "rbn|NB3A|40m|CW": {
 "band": "40m",
-"freq": 7.011,
+"freq": 7.03,
 "lat": 38.5,
 "lon": -77.0,
 "mode": "CW",
-"snr": 18,
+"snr": 10,
 "spotter": "NB3A",
 "src": "rbn",
-"t": 1794058251
+"t": 1794100330
 },
 "rbn|NG7M|10m|CW": {
 "band": "10m",
@@ -10936,14 +10947,14 @@
 },
 "rbn|W1NT|40m|CW": {
 "band": "40m",
-"freq": 7.022,
+"freq": 7.03,
 "lat": 42.5,
 "lon": -71.0,
 "mode": "CW",
-"snr": 10,
+"snr": 39,
 "spotter": "W1NT",
 "src": "rbn",
-"t": 1794058873
+"t": 1794100330
 },
 "rbn|W2NAF|20m|CW": {
 "band": "20m",
@@ -10965,7 +10976,7 @@
 "snr": 18,
 "spotter": "W3DAN",
 "src": "rbn",
-"t": 1794100117
+"t": 1794100330
 },
 "rbn|W3UA|20m|CW": {
 "band": "20m",
