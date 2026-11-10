@@ -9053,6 +9053,17 @@
 "src": "psk",
 "t": 1793744145
 },
+"psk|WA2VNV|20m|FT8": {
+"band": "20m",
+"freq": 14.0755,
+"lat": 40.895833333333336,
+"lon": -73.125,
+"mode": "FT8",
+"snr": "-5",
+"spotter": "WA2VNV",
+"src": "psk",
+"t": 1794315435
+},
 "psk|WA2VNV|40m|FT8": {
 "band": "40m",
 "freq": 7.0763,
