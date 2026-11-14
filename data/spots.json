@@ -4743,14 +4743,14 @@
 },
 "psk|KD7EFG|10m|CW": {
 "band": "10m",
-"freq": 28.148,
+"freq": 28.05,
 "lat": 41.60416666666667,
 "lon": -112.29166666666666,
 "mode": "CW",
-"snr": "7",
+"snr": "26",
 "spotter": "KD7EFG",
 "src": "psk",
-"t": 1794069877
+"t": 1794689061
 },
 "psk|KD7EFG|10m|WSPR": {
 "band": "10m",
@@ -9097,6 +9097,17 @@
 "src": "psk",
 "t": 1793279475
 },
+"psk|NT6Q|10m|CW": {
+"band": "10m",
+"freq": 28.0503,
+"lat": 33.10416666666667,
+"lon": -117.04166666666666,
+"mode": "CW",
+"snr": "9",
+"spotter": "NT6Q",
+"src": "psk",
+"t": 1794689059
+},
 "psk|NT6Q|12m|FT8": {
 "band": "12m",
 "freq": 24.9159,
@@ -11794,14 +11805,14 @@
 },
 "psk|WA7LNW|10m|CW": {
 "band": "10m",
-"freq": 28.0401,
+"freq": 28.0501,
 "lat": 37.145833333333336,
 "lon": -113.45833333333333,
 "mode": "CW",
-"snr": "9",
+"snr": "20",
 "spotter": "WA7LNW",
 "src": "psk",
-"t": 1794070953
+"t": 1794689060
 },
 "psk|WA7LNW|10m|FT8": {
 "band": "10m",
@@ -13983,14 +13994,14 @@
 },
 "rbn|NG7M|10m|CW": {
 "band": "10m",
-"freq": 28.0261,
+"freq": 28.0501,
 "lat": 41.5,
 "lon": -113.0,
 "mode": "CW",
-"snr": 17,
+"snr": 20,
 "spotter": "NG7M",
 "src": "rbn",
-"t": 1794687143
+"t": 1794689069
 },
 "rbn|NG7M|15m|CW": {
 "band": "15m",
@@ -14024,6 +14035,17 @@
 "spotter": "NG7M",
 "src": "rbn",
 "t": 1794525945
+},
+"rbn|NT6Q|10m|CW": {
+"band": "10m",
+"freq": 28.0501,
+"lat": 33.5,
+"lon": -117.0,
+"mode": "CW",
+"snr": 9,
+"spotter": "NT6Q",
+"src": "rbn",
+"t": 1794689069
 },
 "rbn|NU4F|17m|CW": {
 "band": "17m",
@@ -14093,14 +14115,14 @@
 },
 "rbn|TI7W|10m|CW": {
 "band": "10m",
-"freq": 28.0428,
+"freq": 28.0501,
 "lat": 10.5,
 "lon": -85.0,
 "mode": "CW",
-"snr": 10,
+"snr": 15,
 "spotter": "TI7W",
 "src": "rbn",
-"t": 1794663774
+"t": 1794689069
 },
 "rbn|TI7W|15m|CW": {
 "band": "15m",
@@ -14434,14 +14456,14 @@
 },
 "rbn|WA7LNW|10m|CW": {
 "band": "10m",
-"freq": 28.04,
+"freq": 28.0501,
 "lat": 37.5,
 "lon": -113.0,
 "mode": "CW",
-"snr": 9,
+"snr": 20,
 "spotter": "WA7LNW",
 "src": "rbn",
-"t": 1794070965
+"t": 1794689069
 },
 "rbn|WA7LNW|15m|CW": {
 "band": "15m",
