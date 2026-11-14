@@ -1168,14 +1168,14 @@
 },
 "psk|EA8/DF4UE|20m|CW": {
 "band": "20m",
-"freq": 14.0407,
+"freq": 14.037,
 "lat": 28.645833333333332,
 "lon": -13.875,
 "mode": "CW",
-"snr": "10",
+"snr": "19",
 "spotter": "EA8/DF4UE",
 "src": "psk",
-"t": 1794689702
+"t": 1794695885
 },
 "psk|EA8/DF4UE|20m|FT8": {
 "band": "20m",
@@ -3346,14 +3346,14 @@
 },
 "psk|K7CO|20m|CW": {
 "band": "20m",
-"freq": 14.0384,
+"freq": 14.0559,
 "lat": 40.5625,
 "lon": -112.04166666666666,
 "mode": "CW",
-"snr": "20",
+"snr": "16",
 "spotter": "K7CO",
 "src": "psk",
-"t": 1794689820
+"t": 1794695677
 },
 "psk|K7CO|20m|FT8": {
 "band": "20m",
@@ -9242,14 +9242,14 @@
 },
 "psk|NU4F|20m|CW": {
 "band": "20m",
-"freq": 14.0384,
+"freq": 14.0559,
 "lat": 26.145833333333332,
 "lon": -80.125,
 "mode": "CW",
-"snr": "11",
+"snr": "24",
 "spotter": "NU4F",
 "src": "psk",
-"t": 1794689820
+"t": 1794695677
 },
 "psk|NU4F|40m|CW": {
 "band": "40m",
@@ -11396,6 +11396,17 @@
 "src": "psk",
 "t": 1793641470
 },
+"psk|W6MFB/FULLERTON|20m|CW": {
+"band": "20m",
+"freq": 14.037,
+"lat": 33.85416666666667,
+"lon": -117.875,
+"mode": "CW",
+"snr": "12",
+"spotter": "W6MFB/FULLERTON",
+"src": "psk",
+"t": 1794695883
+},
 "psk|W6MYN|17m|FT8": {
 "band": "17m",
 "freq": 18.1016,
@@ -13147,14 +13158,14 @@
 },
 "rbn|DF4UE|20m|CW": {
 "band": "20m",
-"freq": 14.0384,
+"freq": 14.037,
 "lat": 48.5,
 "lon": 9.0,
 "mode": "CW",
-"snr": 14,
+"snr": 19,
 "spotter": "DF4UE",
 "src": "rbn",
-"t": 1794689944
+"t": 1794695885
 },
 "rbn|DK3WW|17m|CW": {
 "band": "17m",
