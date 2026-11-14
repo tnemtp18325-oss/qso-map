@@ -13125,14 +13125,14 @@
 },
 "rbn|ES5PC|10m|CW": {
 "band": "10m",
-"freq": 28.0323,
+"freq": 28.0261,
 "lat": 58.5,
 "lon": 27.0,
 "mode": "CW",
-"snr": 5,
+"snr": 10,
 "spotter": "ES5PC",
 "src": "rbn",
-"t": 1794663280
+"t": 1794665178
 },
 "rbn|G3AKX|10m|CW": {
 "band": "10m",
@@ -14229,7 +14229,7 @@
 "lat": 42.5,
 "lon": -71.0,
 "mode": "CW",
-"snr": 26,
+"snr": 15,
 "spotter": "W1NT",
 "src": "rbn",
 "t": 1794662717
