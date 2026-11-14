@@ -13708,14 +13708,14 @@
 },
 "rbn|KW7MM|10m|CW": {
 "band": "10m",
-"freq": 28.04,
+"freq": 28.0261,
 "lat": 32.5,
 "lon": -111.0,
 "mode": "CW",
-"snr": 42,
+"snr": 20,
 "spotter": "KW7MM",
 "src": "rbn",
-"t": 1794081512
+"t": 1794687142
 },
 "rbn|KW7MM|15m|CW": {
 "band": "15m",
@@ -13972,14 +13972,14 @@
 },
 "rbn|NG7M|10m|CW": {
 "band": "10m",
-"freq": 28.04,
+"freq": 28.0261,
 "lat": 41.5,
 "lon": -113.0,
 "mode": "CW",
-"snr": 14,
+"snr": 17,
 "spotter": "NG7M",
 "src": "rbn",
-"t": 1794081512
+"t": 1794687142
 },
 "rbn|NG7M|15m|CW": {
 "band": "15m",
