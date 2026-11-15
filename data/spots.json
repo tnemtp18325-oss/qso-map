@@ -286,6 +286,17 @@
 "src": "psk",
 "t": 1794405690
 },
+"psk|AB9BH|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 47.770833333333336,
+"lon": -122.29166666666666,
+"mode": "FT8",
+"snr": "-19",
+"spotter": "AB9BH",
+"src": "psk",
+"t": 1794776310
+},
 "psk|AC0G/B4|80m|FT8": {
 "band": "80m",
 "freq": 3.5743,
@@ -538,6 +549,28 @@
 "spotter": "AE5FM",
 "src": "psk",
 "t": 1793279445
+},
+"psk|AE7DX|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 42.8125,
+"lon": -112.375,
+"mode": "FT8",
+"snr": "11",
+"spotter": "AE7DX",
+"src": "psk",
+"t": 1794776280
+},
+"psk|AE7QT|10m|FT8": {
+"band": "10m",
+"freq": 28.0763,
+"lat": 34.8125,
+"lon": -118.875,
+"mode": "FT8",
+"snr": "-3",
+"spotter": "AE7QT",
+"src": "psk",
+"t": 1794776292
 },
 "psk|AF0DB|20m|FT8": {
 "band": "20m",
@@ -1088,6 +1121,17 @@
 "spotter": "CX5DZ",
 "src": "psk",
 "t": 1794775376
+},
+"psk|CX8CRA|10m|FT8": {
+"band": "10m",
+"freq": 28.0761,
+"lat": -34.89583333333333,
+"lon": -56.208333333333336,
+"mode": "FT8",
+"snr": "-17",
+"spotter": "CX8CRA",
+"src": "psk",
+"t": 1794776310
 },
 "psk|DF4UE-1|17m|FT8": {
 "band": "17m",
@@ -2057,6 +2101,17 @@
 "src": "psk",
 "t": 1793743515
 },
+"psk|K0PT|10m|FT8": {
+"band": "10m",
+"freq": 28.0763,
+"lat": 34.145833333333336,
+"lon": -81.20833333333333,
+"mode": "FT8",
+"snr": "-19",
+"spotter": "K0PT",
+"src": "psk",
+"t": 1794776280
+},
 "psk|K0TER|20m|FT8": {
 "band": "20m",
 "freq": 14.0763,
@@ -2860,6 +2915,17 @@
 "src": "psk",
 "t": 1793279475
 },
+"psk|K4OTX|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 34.10416666666667,
+"lon": -84.625,
+"mode": "FT8",
+"snr": "-22",
+"spotter": "K4OTX",
+"src": "psk",
+"t": 1794776340
+},
 "psk|K4PI|40m|FT8": {
 "band": "40m",
 "freq": 7.0763,
@@ -3652,6 +3718,17 @@
 "src": "psk",
 "t": 1793744145
 },
+"psk|K7KX|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 46.22916666666667,
+"lon": -109.375,
+"mode": "FT8",
+"snr": "-7",
+"spotter": "K7KX",
+"src": "psk",
+"t": 1794776280
+},
 "psk|K7MWD|10m|FT8": {
 "band": "10m",
 "freq": 28.075,
@@ -4421,6 +4498,17 @@
 "spotter": "KB5AVY",
 "src": "psk",
 "t": 1793279490
+},
+"psk|KB5FOQ|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 34.97916666666667,
+"lon": -92.04166666666666,
+"mode": "FT8",
+"snr": "-13",
+"spotter": "KB5FOQ",
+"src": "psk",
+"t": 1794776280
 },
 "psk|KB5FOQ|40m|FT8": {
 "band": "40m",
@@ -5643,6 +5731,17 @@
 "src": "psk",
 "t": 1793279445
 },
+"psk|KF0RLO|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 33.9375,
+"lon": -118.20833333333333,
+"mode": "FT8",
+"snr": "-6",
+"spotter": "KF0RLO",
+"src": "psk",
+"t": 1794776280
+},
 "psk|KF0TPL|20m|FT8": {
 "band": "20m",
 "freq": 14.0762,
@@ -5742,6 +5841,17 @@
 "src": "psk",
 "t": 1793279490
 },
+"psk|KF6GQ|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 34.145833333333336,
+"lon": -117.95833333333333,
+"mode": "FT8",
+"snr": "-17",
+"spotter": "KF6GQ",
+"src": "psk",
+"t": 1794776280
+},
 "psk|KF6UFO|17m|FT8": {
 "band": "17m",
 "freq": 18.1016,
@@ -5763,6 +5873,17 @@
 "spotter": "KF7AXE",
 "src": "psk",
 "t": 1794775335
+},
+"psk|KF7MEL|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 47.4375,
+"lon": -111.375,
+"mode": "FT8",
+"snr": "-18",
+"spotter": "KF7MEL",
+"src": "psk",
+"t": 1794776324
 },
 "psk|KF7NP|10m|FT8": {
 "band": "10m",
@@ -6633,6 +6754,17 @@
 "src": "psk",
 "t": 1793728200
 },
+"psk|KK7KHE|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 42.895833333333336,
+"lon": -112.45833333333333,
+"mode": "FT8",
+"snr": "0",
+"spotter": "KK7KHE",
+"src": "psk",
+"t": 1794776294
+},
 "psk|KK7KHE|20m|FT8": {
 "band": "20m",
 "freq": 14.0762,
@@ -6676,6 +6808,28 @@
 "spotter": "KL5E",
 "src": "psk",
 "t": 1793744445
+},
+"psk|KL7J|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 60.520833333333336,
+"lon": -150.95833333333334,
+"mode": "FT8",
+"snr": "-12",
+"spotter": "KL7J",
+"src": "psk",
+"t": 1794776280
+},
+"psk|KL7TC|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 64.89583333333333,
+"lon": -147.625,
+"mode": "FT8",
+"snr": "2",
+"spotter": "KL7TC",
+"src": "psk",
+"t": 1794776280
 },
 "psk|KM0R|10m|FT8": {
 "band": "10m",
@@ -6930,6 +7084,17 @@
 "src": "psk",
 "t": 1793743335
 },
+"psk|KM6KEU|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 37.5,
+"lon": -121.0,
+"mode": "FT8",
+"snr": "-15",
+"spotter": "KM6KEU",
+"src": "psk",
+"t": 1794776280
+},
 "psk|KM6NFO|10m|FT8": {
 "band": "10m",
 "freq": 28.0762,
@@ -6951,6 +7116,17 @@
 "spotter": "KM7AXG",
 "src": "psk",
 "t": 1793975400
+},
+"psk|KM7BVK|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 47.85416666666667,
+"lon": -122.125,
+"mode": "FT8",
+"snr": "-22",
+"spotter": "KM7BVK",
+"src": "psk",
+"t": 1794776280
 },
 "psk|KM7DOD|10m|FT8": {
 "band": "10m",
@@ -7128,6 +7304,17 @@
 "src": "psk",
 "t": 1794405690
 },
+"psk|KO6FHW|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 37.4375,
+"lon": -122.20833333333333,
+"mode": "FT8",
+"snr": "-24",
+"spotter": "KO6FHW",
+"src": "psk",
+"t": 1794776310
+},
 "psk|KO6JZH|10m|FT8": {
 "band": "10m",
 "freq": 28.075,
@@ -7204,6 +7391,17 @@
 "spotter": "KQ4ORY",
 "src": "psk",
 "t": 1793723640
+},
+"psk|KQ4WFN|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 36.0625,
+"lon": -84.54166666666666,
+"mode": "FT8",
+"snr": "-19",
+"spotter": "KQ4WFN",
+"src": "psk",
+"t": 1794776280
 },
 "psk|KQ5S|80m|FT8": {
 "band": "80m",
@@ -7370,6 +7568,17 @@
 "src": "psk",
 "t": 1793278305
 },
+"psk|KW3DX|10m|FT8": {
+"band": "10m",
+"freq": 28.0763,
+"lat": 41.020833333333336,
+"lon": -75.875,
+"mode": "FT8",
+"snr": "-21",
+"spotter": "KW3DX",
+"src": "psk",
+"t": 1794776280
+},
 "psk|KW3S|20m|FT8": {
 "band": "20m",
 "freq": 14.0755,
@@ -7446,6 +7655,17 @@
 "spotter": "KX1X",
 "src": "psk",
 "t": 1793278305
+},
+"psk|KX4AZ/T|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 44.10416666666667,
+"lon": -85.45833333333333,
+"mode": "FT8",
+"snr": "-23",
+"spotter": "KX4AZ/T",
+"src": "psk",
+"t": 1794776310
 },
 "psk|KX4AZ/T|17m|WSPR": {
 "band": "17m",
@@ -7524,6 +7744,28 @@
 "src": "psk",
 "t": 1793744399
 },
+"psk|LU1EAF|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": -37.9375,
+"lon": -57.708333333333336,
+"mode": "FT8",
+"snr": "-10",
+"spotter": "LU1EAF",
+"src": "psk",
+"t": 1794776294
+},
+"psk|LU2MET|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": -32.89583333333333,
+"lon": -68.79166666666666,
+"mode": "FT8",
+"snr": "-19",
+"spotter": "LU2MET",
+"src": "psk",
+"t": 1794776370
+},
 "psk|M0EYT|17m|WSPR": {
 "band": "17m",
 "freq": 18.1061,
@@ -7589,6 +7831,17 @@
 "spotter": "MM9PSY",
 "src": "psk",
 "t": 1793727120
+},
+"psk|N0AN|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 42.10416666666667,
+"lon": -94.04166666666666,
+"mode": "FT8",
+"snr": "-18",
+"spotter": "N0AN",
+"src": "psk",
+"t": 1794776280
 },
 "psk|N0AN|40m|FT8": {
 "band": "40m",
@@ -7710,6 +7963,17 @@
 "spotter": "N0UMF",
 "src": "psk",
 "t": 1794405690
+},
+"psk|N0VTY|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 40.72916666666667,
+"lon": -91.125,
+"mode": "FT8",
+"snr": "-21",
+"spotter": "N0VTY",
+"src": "psk",
+"t": 1794776354
 },
 "psk|N0VTY|20m|FT8": {
 "band": "20m",
@@ -7864,6 +8128,17 @@
 "spotter": "N1ZIF",
 "src": "psk",
 "t": 1793279445
+},
+"psk|N1ZZZ|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 45.5625,
+"lon": -122.70833333333333,
+"mode": "FT8",
+"snr": "-22",
+"spotter": "N1ZZZ",
+"src": "psk",
+"t": 1794776280
 },
 "psk|N2EPE|10m|FT8": {
 "band": "10m",
@@ -8095,6 +8370,17 @@
 "spotter": "N3FMC",
 "src": "psk",
 "t": 1793279457
+},
+"psk|N3IZ|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 39.85416666666667,
+"lon": -77.125,
+"mode": "FT8",
+"snr": "-18",
+"spotter": "N3IZ",
+"src": "psk",
+"t": 1794776280
 },
 "psk|N3JHB|80m|FT8": {
 "band": "80m",
@@ -8602,6 +8888,17 @@
 "src": "psk",
 "t": 1793726640
 },
+"psk|N6NXV|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 37.72916666666667,
+"lon": -122.04166666666666,
+"mode": "FT8",
+"snr": "-21",
+"spotter": "N6NXV",
+"src": "psk",
+"t": 1794776310
+},
 "psk|N6NXV|40m|FT8": {
 "band": "40m",
 "freq": 7.0763,
@@ -8921,6 +9218,17 @@
 "src": "psk",
 "t": 1793279490
 },
+"psk|N7RBP|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 42.35416666666667,
+"lon": -122.875,
+"mode": "FT8",
+"snr": "-5",
+"spotter": "N7RBP",
+"src": "psk",
+"t": 1794776291
+},
 "psk|N7VVX|17m|WSPR": {
 "band": "17m",
 "freq": 18.1061,
@@ -8964,6 +9272,17 @@
 "spotter": "N7WRH",
 "src": "psk",
 "t": 1793641470
+},
+"psk|N7XS|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 48.145833333333336,
+"lon": -122.45833333333333,
+"mode": "FT8",
+"snr": "-7",
+"spotter": "N7XS",
+"src": "psk",
+"t": 1794776400
 },
 "psk|N7ZZE|17m|FT8": {
 "band": "17m",
@@ -9427,6 +9746,17 @@
 "src": "psk",
 "t": 1793281845
 },
+"psk|NE9U|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 44.895833333333336,
+"lon": -91.875,
+"mode": "FT8",
+"snr": "-20",
+"spotter": "NE9U",
+"src": "psk",
+"t": 1794776295
+},
 "psk|NF3R|20m|FT8": {
 "band": "20m",
 "freq": 14.0762,
@@ -9658,6 +9988,17 @@
 "src": "psk",
 "t": 1793409600
 },
+"psk|NL5Y|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 61.645833333333336,
+"lon": -149.375,
+"mode": "FT8",
+"snr": "-7",
+"spotter": "NL5Y",
+"src": "psk",
+"t": 1794776292
+},
 "psk|NL7D|10m|FT8": {
 "band": "10m",
 "freq": 28.075,
@@ -9833,6 +10174,17 @@
 "spotter": "NS5Z",
 "src": "psk",
 "t": 1793279475
+},
+"psk|NS9I|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 44.770833333333336,
+"lon": -87.95833333333333,
+"mode": "FT8",
+"snr": "-17",
+"spotter": "NS9I",
+"src": "psk",
+"t": 1794776280
 },
 "psk|NT6Q|10m|CW": {
 "band": "10m",
@@ -10020,6 +10372,17 @@
 "spotter": "NX1W",
 "src": "psk",
 "t": 1794405702
+},
+"psk|NY4Q|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 34.520833333333336,
+"lon": -83.95833333333333,
+"mode": "FT8",
+"snr": "-22",
+"spotter": "NY4Q",
+"src": "psk",
+"t": 1794776325
 },
 "psk|NY4Q|10m|WSPR": {
 "band": "10m",
@@ -10263,6 +10626,17 @@
 "src": "psk",
 "t": 1793646720
 },
+"psk|PP5CF|10m|FT8": {
+"band": "10m",
+"freq": 28.0763,
+"lat": -27.229166666666668,
+"lon": -49.625,
+"mode": "FT8",
+"snr": "-18",
+"spotter": "PP5CF",
+"src": "psk",
+"t": 1794776280
+},
 "psk|PP5LN|10m|FT8": {
 "band": "10m",
 "freq": 28.0762,
@@ -10284,6 +10658,28 @@
 "spotter": "PP5ZX",
 "src": "psk",
 "t": 1793649240
+},
+"psk|PT9LM|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": -22.395833333333336,
+"lon": -54.54166666666667,
+"mode": "FT8",
+"snr": "-11",
+"spotter": "PT9LM",
+"src": "psk",
+"t": 1794776280
+},
+"psk|PU1ABT|10m|FT8": {
+"band": "10m",
+"freq": 28.0763,
+"lat": -20.3125,
+"lon": -40.29166666666667,
+"mode": "FT8",
+"snr": "-22",
+"spotter": "PU1ABT",
+"src": "psk",
+"t": 1794776280
 },
 "psk|PV8AJ|20m|FT8": {
 "band": "20m",
@@ -10636,6 +11032,17 @@
 "spotter": "VA3XA",
 "src": "psk",
 "t": 1793723640
+},
+"psk|VA5KEN|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 50.4375,
+"lon": -104.54166666666666,
+"mode": "FT8",
+"snr": "15",
+"spotter": "VA5KEN",
+"src": "psk",
+"t": 1794776280
 },
 "psk|VA5KEN|40m|FT8": {
 "band": "40m",
@@ -11935,6 +12342,17 @@
 "src": "psk",
 "t": 1793279457
 },
+"psk|W4GHW|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 31.729166666666664,
+"lon": -83.625,
+"mode": "FT8",
+"snr": "-24",
+"spotter": "W4GHW",
+"src": "psk",
+"t": 1794776370
+},
 "psk|W4HDR|20m|FT8": {
 "band": "20m",
 "freq": 14.0756,
@@ -12386,6 +12804,17 @@
 "src": "psk",
 "t": 1794775305
 },
+"psk|W6YGO|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 38.8125,
+"lon": -121.20833333333333,
+"mode": "FT8",
+"snr": "6",
+"spotter": "W6YGO",
+"src": "psk",
+"t": 1794776293
+},
 "psk|W7CTS|17m|FT8": {
 "band": "17m",
 "freq": 18.1016,
@@ -12683,6 +13112,17 @@
 "src": "psk",
 "t": 1793743529
 },
+"psk|W9JJB|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 42.145833333333336,
+"lon": -88.125,
+"mode": "FT8",
+"snr": "-13",
+"spotter": "W9JJB",
+"src": "psk",
+"t": 1794776280
+},
 "psk|W9JJB|40m|FT8": {
 "band": "40m",
 "freq": 7.0763,
@@ -12726,6 +13166,17 @@
 "spotter": "W9US",
 "src": "psk",
 "t": 1794405704
+},
+"psk|WA0JYF|10m|FT8": {
+"band": "10m",
+"freq": 28.0763,
+"lat": 42.0625,
+"lon": -91.625,
+"mode": "FT8",
+"snr": "-22",
+"spotter": "WA0JYF",
+"src": "psk",
+"t": 1794776297
 },
 "psk|WA0KDS|10m|FT8": {
 "band": "10m",
@@ -13056,6 +13507,17 @@
 "spotter": "WA8H",
 "src": "psk",
 "t": 1793279457
+},
+"psk|WA8PAM|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 33.895833333333336,
+"lon": -84.45833333333333,
+"mode": "FT8",
+"snr": "-18",
+"spotter": "WA8PAM",
+"src": "psk",
+"t": 1794776280
 },
 "psk|WB0DUG|40m|FT8": {
 "band": "40m",
@@ -13805,6 +14267,17 @@
 "src": "psk",
 "t": 1793279475
 },
+"psk|WP3UT|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 18.4375,
+"lon": -67.125,
+"mode": "FT8",
+"snr": "-8",
+"spotter": "WP3UT",
+"src": "psk",
+"t": 1794776370
+},
 "psk|WP4NVX|17m|FT8": {
 "band": "17m",
 "freq": 18.1017,
@@ -13892,6 +14365,17 @@
 "spotter": "WS4ASE",
 "src": "psk",
 "t": 1794343752
+},
+"psk|WS5W|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": 33.35416666666667,
+"lon": -96.54166666666666,
+"mode": "FT8",
+"snr": "-18",
+"spotter": "WS5W",
+"src": "psk",
+"t": 1794776310
 },
 "psk|WT8P|15m|WSPR": {
 "band": "15m",
@@ -14080,6 +14564,17 @@
 "src": "psk",
 "t": 1793409660
 },
+"psk|WZ7L|10m|FT8": {
+"band": "10m",
+"freq": 28.0763,
+"lat": 47.395833333333336,
+"lon": -122.54166666666666,
+"mode": "FT8",
+"snr": "-18",
+"spotter": "WZ7L",
+"src": "psk",
+"t": 1794776280
+},
 "psk|XE1ACA|10m|FT8": {
 "band": "10m",
 "freq": 28.0762,
@@ -14255,6 +14750,17 @@
 "spotter": "ZL3IO",
 "src": "psk",
 "t": 1794775317
+},
+"psk|ZL3RC|10m|FT8": {
+"band": "10m",
+"freq": 28.0762,
+"lat": -43.52083333333333,
+"lon": 172.45833333333331,
+"mode": "FT8",
+"snr": "-16",
+"spotter": "ZL3RC",
+"src": "psk",
+"t": 1794776340
 },
 "psk|ZL7DX|20m|FT8": {
 "band": "20m",
