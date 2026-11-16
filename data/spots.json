@@ -17217,14 +17217,14 @@
 },
 "rbn|TI7W|10m|CW": {
 "band": "10m",
-"freq": 28.0146,
+"freq": 28.0605,
 "lat": 10.5,
 "lon": -85.0,
 "mode": "CW",
 "snr": 11,
 "spotter": "TI7W",
 "src": "rbn",
-"t": 1794755231
+"t": 1794841626
 },
 "rbn|TI7W|15m|CW": {
 "band": "15m",
