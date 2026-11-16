@@ -17217,14 +17217,14 @@
 },
 "rbn|TI7W|10m|CW": {
 "band": "10m",
-"freq": 28.0605,
+"freq": 28.0614,
 "lat": 10.5,
 "lon": -85.0,
 "mode": "CW",
 "snr": 11,
 "spotter": "TI7W",
 "src": "rbn",
-"t": 1794841626
+"t": 1794841727
 },
 "rbn|TI7W|15m|CW": {
 "band": "15m",
@@ -17478,6 +17478,17 @@
 "spotter": "W4KAZ",
 "src": "rbn",
 "t": 1794313518
+},
+"rbn|W6YX|10m|CW": {
+"band": "10m",
+"freq": 28.0614,
+"lat": 37.5,
+"lon": -123.0,
+"mode": "CW",
+"snr": 7,
+"spotter": "W6YX",
+"src": "rbn",
+"t": 1794841727
 },
 "rbn|W6YX|15m|CW": {
 "band": "15m",
