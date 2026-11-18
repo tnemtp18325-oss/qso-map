@@ -5203,6 +5203,17 @@
 "src": "psk",
 "t": 1794405704
 },
+"psk|KC2DAC|17m|CW": {
+"band": "17m",
+"freq": 18.0817,
+"lat": 42.895833333333336,
+"lon": -78.45833333333333,
+"mode": "CW",
+"snr": "32",
+"spotter": "KC2DAC",
+"src": "psk",
+"t": 1795032903
+},
 "psk|KC2DAC|20m|CW": {
 "band": "20m",
 "freq": 14.065,
@@ -16610,6 +16621,17 @@
 "src": "rbn",
 "t": 1794313518
 },
+"rbn|K3FEF|17m|CW": {
+"band": "17m",
+"freq": 18.0817,
+"lat": 41.5,
+"lon": -75.0,
+"mode": "CW",
+"snr": 38,
+"spotter": "K3FEF",
+"src": "rbn",
+"t": 1795032913
+},
 "rbn|K3FEF|20m|CW": {
 "band": "20m",
 "freq": 14.0497,
@@ -16961,6 +16983,17 @@
 "spotter": "K9TM",
 "src": "rbn",
 "t": 1795023973
+},
+"rbn|KC2DAC|17m|CW": {
+"band": "17m",
+"freq": 18.0817,
+"lat": 42.5,
+"lon": -79.0,
+"mode": "CW",
+"snr": 32,
+"spotter": "KC2DAC",
+"src": "rbn",
+"t": 1795032913
 },
 "rbn|KC2DAC|20m|CW": {
 "band": "20m",
@@ -17910,14 +17943,14 @@
 },
 "rbn|VE6JY|17m|CW": {
 "band": "17m",
-"freq": 18.0893,
+"freq": 18.0817,
 "lat": 53.5,
 "lon": -113.0,
 "mode": "CW",
-"snr": 31,
+"snr": 24,
 "spotter": "VE6JY",
 "src": "rbn",
-"t": 1794153943
+"t": 1795032913
 },
 "rbn|VE6JY|20m|CW": {
 "band": "20m",
