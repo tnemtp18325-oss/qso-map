@@ -1377,14 +1377,14 @@
 },
 "psk|EA8/DF4UE|10m|CW": {
 "band": "10m",
-"freq": 28.0428,
+"freq": 28.0259,
 "lat": 28.645833333333332,
 "lon": -13.875,
 "mode": "CW",
-"snr": "5",
+"snr": "6",
 "spotter": "EA8/DF4UE",
 "src": "psk",
-"t": 1794663767
+"t": 1795713594
 },
 "psk|EA8/DF4UE|10m|FT8": {
 "band": "10m",
